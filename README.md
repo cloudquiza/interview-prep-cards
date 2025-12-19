@@ -102,10 +102,16 @@ File requirements:
 
 ## Privacy & storage
 
-- Everything runs **entirely in your browser**
-- No data is sent to a server
-- CSV files are **not saved permanently**
+- All CSV parsing and card interaction happens entirely in your browser
+
+- No uploaded content is sent to a backend or stored on a server
+
+- CSV files are not saved permanently
+
 - Refreshing the page resets the deck
+
+- Basic, privacy-friendly analytics (Google Analytics 4) are used to understand general site usage only, such as page views and interaction events (e.g. button clicks and outbound links).
+  No personally identifiable information or CSV content is collected.
 
 ---
 
