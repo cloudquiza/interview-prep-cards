@@ -1,40 +1,69 @@
 const LLM_PROMPT = `Create and attach a downloadable CSV file named interview_deck.csv.
 
-The CSV must have EXACTLY these headers (do not change them, do not add columns):
+IMPORTANT (MUST FOLLOW):
+
+You MUST create a physical CSV file and attach it for download.
+
+Do NOT print the CSV contents in the chat.
+
+The only acceptable output is the downloadable file attachment.
+
+If a file is not attached, the task is considered incomplete.
+
+CSV STRUCTURE (STRICT):
+
+The first line MUST be exactly:
 question,answer
 
-Goal:
+The CSV must have EXACTLY these two columns:
+question,answer
+
+Do NOT add, remove, or rename columns.
+
+Quote EVERY field with double quotes.
+
+If a field contains a double quote, escape it by doubling it ("").
+
+The output must be a valid CSV file that opens correctly in Excel and Google Sheets.
+
+GOAL:
 Generate highly targeted interview practice questions and concise answers for the role specified below.
 
 ROLE (REQUIRED — edit this):
 [PASTE ROLE TITLE HERE]
 
-Optional (for better targeting):
-If a job posting is provided below, tailor the questions and answers to the responsibilities, tools, and keywords in that posting.
-If no job posting is provided, use general interview topics relevant to the role.
-
-JOB POSTING (OPTIONAL — paste below, or leave blank):
+JOB POSTING (OPTIONAL — for better targeting):
 <<<
-PASTE JOB POSTING HERE (optional)
+PASTE JOB POSTING HERE
 >>>
 
-Requirements:
-- Generate 20 interview questions and concise answers.
-- Answers should be 2–4 sentences, practical, and in first person.
-- Avoid overly long paragraphs.
-- Mix question types:
-  - Behavioral
-  - Role-specific technical or domain fundamentals
-  - Collaboration and communication
-  - Tools, processes, or workflows relevant to the role
-- Keep answers realistic and focused on impact.
+CONTENT REQUIREMENTS:
 
-File requirements:
-- The first line must be: question,answer
-- Quote EVERY field with double quotes.
-- If a field contains a double quote, escape it by doubling it ("")
-- Output MUST be valid CSV ONLY.
-- Do NOT include markdown, explanations, or any text outside the CSV.
+Generate exactly 20 interview questions.
+
+Answers must be 2–4 sentences, practical, realistic, and written in first person.
+
+Avoid overly long paragraphs.
+
+Focus on real-world impact and decision-making.
+
+Mix question types:
+
+Behavioral
+
+Role-specific technical or domain fundamentals
+
+Collaboration and communication
+
+Tools, processes, and workflows relevant to the role
+
+FINAL CHECK BEFORE SUBMITTING:
+
+The file is named interview_deck.csv
+
+The file is attached and downloadable
+
+No CSV text appears in the chat response
 `;
 
 // DOM
