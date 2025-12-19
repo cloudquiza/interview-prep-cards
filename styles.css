@@ -9,10 +9,12 @@
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
@@ -30,6 +32,7 @@ body {
     var(--bg);
 }
 
+/* Layout */
 .wrap {
   width: min(860px, 92vw);
   margin: 0 auto;
@@ -37,17 +40,20 @@ body {
   padding-bottom: 84px; /* space for fixed footer */
 }
 
+/* Header */
 .header h1 {
   margin: 0 0 6px;
   font-size: clamp(26px, 4vw, 36px);
   letter-spacing: -0.4px;
 }
+
 .sub {
   margin: 0;
   color: var(--muted);
   line-height: 1.45;
 }
 
+/* Panel */
 .panel {
   margin-top: 16px;
   padding: 14px;
@@ -66,6 +72,7 @@ body {
   gap: 10px;
 }
 
+/* Buttons */
 .btn {
   border: 1px solid var(--border);
   background: linear-gradient(
@@ -79,18 +86,22 @@ body {
   font-weight: 750;
   cursor: pointer;
 }
+
 .btn:hover {
   filter: brightness(1.06);
 }
+
 .btn:disabled {
   opacity: 0.55;
   cursor: not-allowed;
   filter: none;
 }
+
 .btn.ghost {
   background: rgba(255, 255, 255, 0.04);
 }
 
+/* File input */
 #fileInput {
   position: absolute;
   left: -9999px;
@@ -99,6 +110,7 @@ body {
   opacity: 0;
 }
 
+/* LLM links */
 .llm-links {
   display: flex;
   gap: 8px;
@@ -116,28 +128,23 @@ body {
   background: rgba(255, 255, 255, 0.04);
   font-size: 13px;
 }
+
 .pill:hover {
   filter: brightness(1.08);
 }
 
-.link {
-  color: rgba(238, 243, 255, 0.9);
-  text-decoration: underline;
-  font-size: 13px;
-}
-.link:hover {
-  color: var(--text);
-}
-
+/* Status text */
 .status {
   margin-left: auto;
   color: var(--muted);
   font-size: 13px;
 }
+
 code {
   color: rgba(238, 243, 255, 0.92);
 }
 
+/* Card area */
 .cardArea {
   margin-top: 14px;
 }
@@ -191,6 +198,7 @@ code {
 .front {
   transform: rotateY(0deg);
 }
+
 .back {
   transform: rotateY(180deg);
 }
@@ -198,10 +206,12 @@ code {
 .card.flipped .front {
   transform: rotateY(180deg);
 }
+
 .card.flipped .back {
   transform: rotateY(360deg);
 }
 
+/* Navigation */
 .nav {
   margin-top: 10px;
   display: flex;
@@ -222,6 +232,7 @@ code {
   text-align: center;
 }
 
+/* Fixed footer */
 .footer {
   position: fixed;
   bottom: 0;
@@ -249,12 +260,29 @@ code {
   opacity: 0.85;
 }
 
-.github-icon {
-  width: 14px;
-  height: 14px;
-  opacity: 0.85;
+/* Footer social icons */
+.footer-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 6px;
 }
 
-.github-link:hover .github-icon {
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.social-icon {
+  width: 14px;
+  height: 14px;
+  display: block; /* micro-polish: fixes baseline alignment */
+  opacity: 0.8;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.social-link:hover .social-icon {
   opacity: 1;
+  transform: translateY(-1px);
 }
