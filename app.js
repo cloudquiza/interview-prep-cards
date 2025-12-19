@@ -3,17 +3,39 @@ const LLM_PROMPT = `Create and attach a downloadable CSV file named interview_de
 The CSV must have EXACTLY these headers (do not change them, do not add columns):
 question,answer
 
-Generate 20 interview questions and concise answers for a [ADD ROLE HERE] interview.
+Goal:
+Generate highly targeted interview practice questions and concise answers for the role specified below.
+
+ROLE (REQUIRED — edit this):
+[PASTE ROLE TITLE HERE]
+
+Optional (for better targeting):
+If a job posting is provided below, tailor the questions and answers to the responsibilities, tools, and keywords in that posting.
+If no job posting is provided, use general interview topics relevant to the role.
+
+JOB POSTING (OPTIONAL — paste below, or leave blank):
+<<<
+PASTE JOB POSTING HERE (optional)
+>>>
+
+Requirements:
+- Generate 20 interview questions and concise answers.
 - Answers should be 2–4 sentences, practical, and in first person.
 - Avoid overly long paragraphs.
+- Mix question types:
+  - Behavioral (STAR-style)
+  - Role-specific technical or domain fundamentals
+  - Collaboration and communication
+  - Tools, processes, or workflows relevant to the role (tailor to the job posting if provided)
+- Keep the answers realistic: confident, not overly “expert,” and focused on impact.
 
 File requirements:
 - The first line must be: question,answer
-- Quote EVERY field with double quotes
-- If a field contains a double quote, escape it by doubling it ("")
-- The output must be a valid CSV file that I can download directly
-
-Do NOT include markdown, explanations, or any text outside the file.`;
+- Quote EVERY field with double quotes.
+- If a field contains a double quote, escape it by doubling it ("").
+- Output MUST be valid CSV ONLY (no markdown, no code fences, no tables, no extra commentary).
+- Do NOT include any text outside the CSV.
+`;
 
 // DOM
 const copyPromptBtn = document.getElementById("copyPromptBtn");
