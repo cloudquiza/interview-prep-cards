@@ -119,7 +119,7 @@ No CSV text appears in the chat response
 ## Features
 
 - AI-driven prompt for custom interview decks
-- Role-agnostic (works for QA, Risk, Fraud, GRC, Support, PM, Engineering, and more)
+- Role-agnostic
 - Optional job-posting targeting
 - Instant practice after CSV upload
 - Click-to-flip cards
