@@ -14,9 +14,9 @@ https://cloudquiza.github.io/interview-prep-cards/
 
 ## How it works
 
-1. **Copy the prompt** from the site and paste it into ChatGPT.
+1. **Copy the prompt** from the site and paste it into ChatGPT. For the best experience (including generating a downloadable CSV file), make sure you’re logged into your ChatGPT account.
 2. **Customize the prompt** by updating the role name, adjusting the number of questions, and optionally pasting a full job posting for more targeted results.
-3. Download the generated **`interview_deck.csv`**.
+3. Download the generated **`interview_deck.csv`**. Alternatively, you can create your own CSV manually with your own questions and answers, as long as it follows the required schema.
 4. **Upload the CSV** and start practicing immediately:
    - Click the card to flip between question and answer
    - Use **Prev / Next** to move through the deck
