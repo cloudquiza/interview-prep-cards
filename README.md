@@ -14,7 +14,7 @@ https://cloudquiza.github.io/interview-prep-cards/
 
 ## How it works
 
-1. **Copy the prompt** from the site and paste it into your preferred LLM (ChatGPT or Gemini work especially well).
+1. **Copy the prompt** from the site and paste it into ChatGPT.
 2. **Customize the prompt** by updating the role name, adjusting the number of questions, and optionally pasting a full job posting for more targeted results.
 3. Download the generated **`interview_deck.csv`**.
 4. **Upload the CSV** and start practicing immediately:
