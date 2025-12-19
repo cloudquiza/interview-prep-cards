@@ -23,18 +23,18 @@ Requirements:
 - Answers should be 2–4 sentences, practical, and in first person.
 - Avoid overly long paragraphs.
 - Mix question types:
-  - Behavioral (STAR-style)
+  - Behavioral
   - Role-specific technical or domain fundamentals
   - Collaboration and communication
-  - Tools, processes, or workflows relevant to the role (tailor to the job posting if provided)
-- Keep the answers realistic: confident, not overly “expert,” and focused on impact.
+  - Tools, processes, or workflows relevant to the role
+- Keep answers realistic and focused on impact.
 
 File requirements:
 - The first line must be: question,answer
 - Quote EVERY field with double quotes.
-- If a field contains a double quote, escape it by doubling it ("").
-- Output MUST be valid CSV ONLY (no markdown, no code fences, no tables, no extra commentary).
-- Do NOT include any text outside the CSV.
+- If a field contains a double quote, escape it by doubling it ("")
+- Output MUST be valid CSV ONLY.
+- Do NOT include markdown, explanations, or any text outside the CSV.
 `;
 
 // DOM
