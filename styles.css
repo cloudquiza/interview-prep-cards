@@ -41,16 +41,41 @@ body {
 }
 
 /* Header */
+.header {
+  margin-bottom: 10px; /* subtle spacing before mini-info */
+}
+
 .header h1 {
-  margin: 0 0 6px;
+  margin: 0;
   font-size: clamp(26px, 4vw, 36px);
   letter-spacing: -0.4px;
 }
 
-.sub {
-  margin: 0;
+/* Mini info / how it works */
+.mini-info {
+  margin-top: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 10px 12px;
+}
+
+.mini-info summary {
+  cursor: pointer;
+  font-weight: 750;
+  color: rgba(238, 243, 255, 0.92);
+}
+
+.mini-info ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
   color: var(--muted);
+  font-size: 13px;
   line-height: 1.45;
+}
+
+.mini-info li {
+  margin: 6px 0;
 }
 
 /* Panel */
@@ -223,13 +248,6 @@ code {
 .counter {
   color: var(--muted);
   font-size: 13px;
-}
-
-.keys {
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: 12px;
-  text-align: center;
 }
 
 /* Fixed footer */

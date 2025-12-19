@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Interview Prep Cards</title>
+    <title>Interview Prep with AI</title>
 
     <link rel="icon" type="image/png" href="./favicon.png" />
 
@@ -17,17 +17,45 @@
     <main class="wrap">
       <header class="header">
         <h1>Interview Prep Cards</h1>
-        <p class="sub">
-          Copy the prompt → Pick an LLM → Generate a CSV → Upload → Flip cards →
-          Ace your interview
-        </p>
       </header>
+
+      <section class="mini-info">
+        <details>
+          <summary>How this works</summary>
+          <ul>
+            <li>
+              <b>Copy the prompt</b> and paste it into your preferred LLM
+              (ChatGPT or Gemini work especially well).
+            </li>
+            <li>
+              <b>Customize the prompt:</b> update the role name, adjust the
+              number of questions, and optionally paste a full job posting for
+              more targeted results.
+            </li>
+            <li>
+              Upload the generated <code>interview_deck.csv</code> (headers must
+              be <code>question,answer</code>; the prompt handles this for you).
+            </li>
+            <li>
+              <b>Practice instantly:</b> your cards appear as soon as the CSV is
+              uploaded. Click the card to flip it, or use <b>Prev / Next</b> to
+              move through the deck and start practicing right away.
+            </li>
+            <li>
+              <b>Privacy:</b> everything runs in your browser. Nothing is sent
+              to a server.
+            </li>
+            <li>
+              <b>Storage:</b> your CSV isn’t saved permanently. Refreshing the
+              page resets the deck.
+            </li>
+          </ul>
+        </details>
+      </section>
 
       <section class="panel">
         <div class="row">
-          <button class="btn" id="copyPromptBtn">
-            Copy the prompt → Drop it into your favorite LLM
-          </button>
+          <button class="btn" id="copyPromptBtn">Copy the prompt</button>
 
           <div class="llm-links" aria-label="Open an LLM in a new tab">
             <a
@@ -36,13 +64,6 @@
               target="_blank"
               rel="noopener"
               >ChatGPT</a
-            >
-            <a
-              class="pill"
-              href="https://claude.ai/"
-              target="_blank"
-              rel="noopener"
-              >Claude</a
             >
             <a
               class="pill"
@@ -75,13 +96,13 @@
           <div class="face front">
             <div class="badge">Question</div>
             <div class="text" id="qText">Upload a CSV to start.</div>
-            <div class="hint">Click / Enter to flip</div>
+            <div class="hint">Click to flip</div>
           </div>
 
           <div class="face back">
             <div class="badge">Answer</div>
             <div class="text" id="aText"></div>
-            <div class="hint">Click / Enter to flip back</div>
+            <div class="hint">Click to flip back</div>
           </div>
         </div>
 
@@ -90,15 +111,12 @@
           <div class="counter" id="counter">—</div>
           <button class="btn ghost" id="nextBtn" disabled>Next</button>
         </div>
-
-        <div class="keys">Keys: ← / → to navigate • Enter to flip</div>
       </section>
     </main>
 
     <footer class="footer">
-      <div>Runs fully in your browser. Nothing is uploaded to a server.</div>
+      <div>Built with ❤️ from Evanston, IL</div>
       <div class="footer-meta">
-        | Built with ❤️ from Evanston, IL |
         <span class="footer-links">
           <a
             href="https://github.com/cloudquiza/interview-prep-cards"
