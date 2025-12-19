@@ -1,9 +1,8 @@
-# Interview Prep Cards
+# Interview Prep with AI
 
-A minimal, no-friction interview practice site.
+A minimal, no-friction interview practice site powered by AI prompts.
 
-Generate your own interview questions using an LLM, upload them as a CSV, and practice by flipping cards.  
-Everything runs locally in the browser. No accounts. No backend.
+Generate your own interview questions using an LLM, upload them as a CSV, and practice immediately with interactive flip cards. Everything runs locally in your browser — no accounts, no backend.
 
 ---
 
@@ -13,12 +12,15 @@ https://cloudquiza.github.io/interview-prep-cards/
 
 ---
 
-## How to use
+## How it works
 
-1. Click **Copy LLM Prompt**
-2. Open ChatGPT, Claude, Gemini, or another LLM and paste the prompt
-3. Download the generated `interview_deck.csv`
-4. Upload the CSV here and practice by flipping cards
+1. **Copy the prompt** from the site and paste it into your preferred LLM (ChatGPT or Gemini work especially well).
+2. **Customize the prompt** by updating the role name, adjusting the number of questions, and optionally pasting a full job posting for more targeted results.
+3. Download the generated **`interview_deck.csv`**.
+4. **Upload the CSV** and start practicing immediately:
+   - Click the card to flip between question and answer
+   - Use **Prev / Next** to move through the deck
+5. Practice confidently and prepare to ace your next interview.
 
 ---
 
@@ -35,11 +37,13 @@ Each row represents one card:
 - **question** → front of the card
 - **answer** → back of the card
 
+The provided LLM prompt handles this formatting for you.
+
 ---
 
 ## LLM prompt
 
-You may edit the role or number of questions, but **do not change the CSV headers or structure**.
+You may edit the role, number of questions, and job posting, but **do not change the CSV headers or structure**.
 
 ```
 Create and attach a downloadable CSV file named interview_deck.csv.
@@ -67,38 +71,41 @@ Requirements:
 - Answers should be 2–4 sentences, practical, and in first person.
 - Avoid overly long paragraphs.
 - Mix question types:
-  - Behavioral (STAR-style)
+  - Behavioral
   - Role-specific technical or domain fundamentals
   - Collaboration and communication
-  - Tools, processes, or workflows relevant to the role (tailor to the job posting if provided)
-- Keep the answers realistic: confident, not overly “expert,” and focused on impact.
+  - Tools, processes, or workflows relevant to the role
+- Keep answers realistic and focused on impact.
 
 File requirements:
 - The first line must be: question,answer
 - Quote EVERY field with double quotes.
-- If a field contains a double quote, escape it by doubling it ("").
-- Output MUST be valid CSV ONLY (no markdown, no code fences, no tables, no extra commentary).
-- Do NOT include any text outside the CSV.
+- If a field contains a double quote, escape it by doubling it ("")
+- Output MUST be valid CSV ONLY.
+- Do NOT include markdown, explanations, or any text outside the CSV.
 ```
 
 ---
 
 ## Features
 
-- Copy-paste LLM prompt for CSV generation
-- Quick links to ChatGPT, Claude, and Gemini
-- CSV upload (client-side only)
-- Interactive flip cards (click or Enter)
-- Keyboard navigation (← / →)
-- Works directly on GitHub Pages
+- AI-driven prompt for custom interview decks
+- Role-agnostic (works for QA, Risk, Fraud, GRC, Support, PM, Engineering, and more)
+- Optional job-posting targeting
+- Instant practice after CSV upload
+- Click-to-flip cards
+- Prev / Next navigation
+- Keyboard-friendly interaction
+- Runs directly on GitHub Pages
 
 ---
 
-## Privacy
+## Privacy & storage
 
-- All CSV parsing happens in your browser
-- No data is uploaded or stored on a server
-- Reloading the page requires re-uploading the CSV
+- Everything runs **entirely in your browser**
+- No data is sent to a server
+- CSV files are **not saved permanently**
+- Refreshing the page resets the deck
 
 ---
 
@@ -140,4 +147,4 @@ MIT — free to use, fork, and adapt.
 
 ## Author
 
-Built as a minimal portfolio project for interview preparation and practice.
+Built as a minimal portfolio project for interview preparation.
