@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Interview Prep Cards</title>
+    <meta
+      name="description"
+      content="Copy an LLM prompt, generate a CSV, upload it, and practice with flip cards."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="header">
+        <h1>Interview Prep Cards</h1>
+        <p class="sub">
+          Copy the prompt → generate a CSV → upload it → flip cards.
+        </p>
+      </header>
+
+      <section class="panel">
+        <div class="row">
+          <button class="btn" id="copyPromptBtn">
+            Copy LLM Prompt (then open)
+          </button>
+
+          <div class="llm-links" aria-label="Open an LLM in a new tab">
+            <a
+              class="pill"
+              href="https://chat.openai.com/"
+              target="_blank"
+              rel="noopener"
+              >ChatGPT</a
+            >
+            <a
+              class="pill"
+              href="https://claude.ai/"
+              target="_blank"
+              rel="noopener"
+              >Claude</a
+            >
+            <a
+              class="pill"
+              href="https://gemini.google.com/"
+              target="_blank"
+              rel="noopener"
+              >Gemini</a
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <label class="btn ghost" for="fileInput">Upload CSV</label>
+          <input id="fileInput" type="file" accept=".csv" />
+
+          <a class="link" href="./sample-cards.csv" download
+            >Download sample CSV</a
+          >
+
+          <div class="status" id="status">
+            CSV headers must be: <code>question,answer</code>
+          </div>
+        </div>
+      </section>
+
+      <section class="cardArea">
+        <div
+          class="card"
+          id="card"
+          role="button"
+          tabindex="0"
+          aria-label="Flip card"
+        >
+          <div class="face front">
+            <div class="badge">Question</div>
+            <div class="text" id="qText">Upload a CSV to start.</div>
+            <div class="hint">Click / Enter to flip</div>
+          </div>
+
+          <div class="face back">
+            <div class="badge">Answer</div>
+            <div class="text" id="aText"></div>
+            <div class="hint">Click / Enter to flip back</div>
+          </div>
+        </div>
+
+        <div class="nav">
+          <button class="btn ghost" id="prevBtn" disabled>Prev</button>
+          <div class="counter" id="counter">—</div>
+          <button class="btn ghost" id="nextBtn" disabled>Next</button>
+        </div>
+
+        <div class="keys">Keys: ← / → to navigate • Enter to flip</div>
+      </section>
+
+      <footer class="footer">
+        Runs fully in your browser. Nothing is uploaded to a server.
+      </footer>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
