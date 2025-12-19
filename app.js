@@ -54,6 +54,13 @@ const counterEl = document.getElementById("counter");
 let cards = []; // { question, answer }
 let i = 0;
 
+// GA4 custom event helper (privacy-safe)
+function track(eventName) {
+  if (typeof window.gtag === "function") {
+    window.gtag("event", eventName);
+  }
+}
+
 // Clipboard
 async function copy(text) {
   try {
@@ -165,6 +172,7 @@ function render() {
 function flip() {
   if (!cards.length) return;
   cardEl.classList.toggle("flipped");
+  track("card_flipped");
 }
 
 function next() {
@@ -184,6 +192,8 @@ function prev() {
 // Events
 copyPromptBtn.addEventListener("click", async () => {
   await copy(LLM_PROMPT);
+  track("prompt_copied");
+
   const old = copyPromptBtn.textContent;
   copyPromptBtn.textContent = "Copied!";
   setTimeout(() => (copyPromptBtn.textContent = old), 800);
@@ -206,6 +216,9 @@ fileInput.addEventListener("change", async (e) => {
     cards = toCards(parseCSV(text));
     i = 0;
     render();
+
+    track("csv_uploaded");
+
     setStatus(
       `Loaded <b>${cards.length}</b> cards • headers required: <code>question,answer</code>`
     );
