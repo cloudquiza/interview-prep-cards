@@ -34,6 +34,7 @@ body {
   width: min(860px, 92vw);
   margin: 0 auto;
   padding: 26px 0 44px;
+  padding-bottom: 84px; /* space for fixed footer */
 }
 
 .header h1 {
@@ -222,7 +223,28 @@ code {
 }
 
 .footer {
-  margin-top: 16px;
-  color: var(--muted);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0 12px;
+  text-align: center;
   font-size: 13px;
+  color: var(--muted);
+  background: linear-gradient(
+    to top,
+    rgba(11, 15, 26, 0.96),
+    rgba(11, 15, 26, 0.85)
+  );
+  backdrop-filter: blur(6px);
+  border-top: 1px solid var(--border);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-meta {
+  font-size: 12px;
+  opacity: 0.85;
 }
