@@ -3,7 +3,7 @@ const LLM_PROMPT = `Create and attach a downloadable CSV file named interview_de
 The CSV must have EXACTLY these headers (do not change them, do not add columns):
 question,answer
 
-Generate 20 interview questions and concise answers for a QA Analyst interview.
+Generate 20 interview questions and concise answers for a [ADD ROLE HERE] interview.
 - Answers should be 2–4 sentences, practical, and in first person.
 - Avoid overly long paragraphs.
 
